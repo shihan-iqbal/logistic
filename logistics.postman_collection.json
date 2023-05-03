@@ -1,0 +1,91 @@
+{
+	"info": {
+		"_postman_id": "bd430043-4164-4cd1-a88e-9b6b60aed6d9",
+		"name": "logistics",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Admin Get All",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8045/v1/api/logistic/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8045",
+					"path": [
+						"v1",
+						"api",
+						"logistic",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin POST",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"senderAddress\" : \"Colombo\",\n   \"recipientAddress\" : \"UK\",\n   \"packageWeight\" :  120.40\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8045/v1/api/logistic",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8045",
+					"path": [
+						"v1",
+						"api",
+						"logistic"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
